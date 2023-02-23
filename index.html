@@ -4,46 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
   
-  <title>Frontend Mentor | Interactive rating component</title>
+  <title>Interactive rating component | Gabriel Mayorga</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+<main class="main-container">
+  <section class="card rate-card">
+    <div class="content">
+      <img src="./images/icon-star.svg" alt="Star Icon">
+      <h1 class="title">How did we do?</h1>
+      <p class="description">Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!</p>
 
-  <!-- Rating state start -->
+      <div class="buttons">
+        <div onclick="selected('btn-1')" onmouseover="over('btn-1')" onmouseout="lastOver('btn-1')" class="button btn-1">1</div>
+        <div onclick="selected('btn-2')" onmouseover="over('btn-2')" onmouseout="lastOver('btn-2')" class="button btn-2">2</div>
+        <div onclick="selected('btn-3')" onmouseover="over('btn-3')" onmouseout="lastOver('btn-3')" class="button btn-3">3</div>
+        <div onclick="selected('btn-4')" onmouseover="over('btn-4')" onmouseout="lastOver('btn-4')" class="button btn-4">4</div>
+        <div onclick="selected('btn-5')" onmouseover="over('btn-5')" onmouseout="lastOver('btn-5')" class="button btn-5">5</div>
+      </div>
 
-  How did we do?
+      <button disabled class="submit-button" onclick="submit()">Submit</button>
+    </div>
+  </section>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+  <section class="card thanks-card inactive">
+    <img src="./images/illustration-thank-you.svg" alt="Thank you image">
+    <span class="rate">You selected <span class="rate-selected">4</span> out of 5</span>
+    <h1 class="title">Thank you!</h1>
+    <p class="thanks-description">We appreciate you taking the time to give a rating. If you ever need more support,
+      don’t hesitate to get in touch!</p>
+  </section>
+</main>
 
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://www.gabrielmayorga.com/">Gabriel Mayorga</a>.
+  </footer>
+
+<script src="./main.js"></script>
 </body>
 </html>
